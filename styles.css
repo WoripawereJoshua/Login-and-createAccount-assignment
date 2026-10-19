@@ -133,11 +133,3 @@ form {
                                                          color:#7b8796; 
                                                          font-size:11px;
                                                           text-align:center; }
-@media (max-width:420px) {
-        .auth-card { padding:25px 22px;
-        }
-        .name-fields { 
-            
-            grid-template-columns:1fr;
-        }
-     }
