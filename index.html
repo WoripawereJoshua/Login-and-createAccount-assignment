@@ -1,26 +1,63 @@
 <!doctype html>
+<!-- Sign-in page -->
 <html lang="en">
   <head>
+    <!-- Shows all characters correctly -->
     <meta charset="UTF-8" />
+    <!-- Makes the page fit phone screens -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Text shown on the browser tab -->
     <title>Sign in | MUST Admissions</title>
+    <!-- Connects the shared design file -->
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
+    <!-- Main content area, centred by the .page style -->
+     
     <main class="page">
+
+      <!-- White card; aria-labelledby tells screen readers which heading names it -->
       <section class="auth-card" aria-labelledby="login-title">
-        <img class="logo" src="must-logo.png" alt="Mbarara University of Science and Technology logo" />
+
+        <!-- Logo; the alt text shows if the image fails to load -->
+        <img class="logo" src="assets/must-logo.png" alt="Mbarara University of Science and Technology logo" />
         <p class="portal-name">MUST Admissions Portal</p>
+
+        <!-- Heading; the id links it to the section above -->
         <h1 id="login-title">Welcome back</h1>
         <p class="intro">Sign in to continue your application.</p>
-        <form action="#">
-          <label>Email address<input type="email" placeholder="you@example.com" autocomplete="email" required /></label>
-          <label>Password<input type="password" placeholder="Enter your password" autocomplete="current-password" required /></label>
-          <div class="form-row"><label class="check"><input type="checkbox" /> Remember me</label><a href="#reset">Forgot password?</a></div>
-          <button type="submit">Sign in</button>
+
+        <form>
+              <!-- Email box: checks the format, lets the browser autofill, cannot be empty -->
+              <label>
+                Email address
+                <input type="email" placeholder="you@example.com" autocomplete="email" required />
+              </label>
+
+              <!-- Password box: hides the characters and works with password managers -->
+              <label>
+                Password
+                <input type="password" placeholder="Enter your password" autocomplete="current-password" required />
+              </label>
+
+              <!-- Remember me checkbox and forgot-password link (#reset is a placeholder) -->
+              <div class="form-row">
+                <label class="check">
+                  <input type="checkbox" /> Remember me
+                </label>
+                <a href="#reset">Forgot password?</a>
+              </div>
+
+              <!-- Checks the required fields, then submits the form -->
+              <button type="submit">Sign in</button>
         </form>
+
+        <!-- Link to the sign-up page -->
         <p class="alternate">New applicant? <a href="create-account.html">Create an account</a></p>
       </section>
+
+      <!-- Copyright line -->
       <footer>© 2026 Mbarara University of Science and Technology</footer>
     </main>
   </body>
