@@ -1,135 +1,183 @@
-:root { 
-    --blue:#1f4697; 
-    --gold:#f5c515; 
-    --ink:#1f2c3d; 
-    --muted:#637083; 
-    --line:#d9e0e8;
- }
+/* MUST Admissions Portal: styles shared by the sign-in and create-account pages */
 
+/* Colour palette: change a colour here and the whole site updates */
+:root {
+  --blue: #1f4697;
+  --gold: #f5c515;
+  --ink: #1f2c3d;
+  --muted: #637083;
+  --line: #d9e0e8;
+}
 
-* { 
-    box-sizing:border-box; 
+/* Makes padding and borders count inside an element's width, so sizes behave */
+* {
+  box-sizing: border-box;
+}
+
+/* Page background, default text colour and font */
+body {
+  margin: 0;
+  background: #f5f7fa;
+  color: var(--ink);
+  font: 14px/1.5 Arial, sans-serif;
+}
+
+/* Centres the card on the screen, both across and up-down */
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+/* The white card that holds each form */
+.auth-card {
+  width: min(100%, 430px);
+  padding: 28px 36px 30px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(26, 45, 73, .06);
+  text-align: center;
+}
+
+/* University logo, centred above the heading */
+.logo {
+  display: block;
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 10px;
+  object-fit: contain;
+}
+
+/* Small blue "MUST Admissions Portal" label under the logo */
+.portal-name {
+  margin: 0 0 26px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+/* Main page heading */
+h1 {
+  margin: 0;
+  font-size: 27px;
+  letter-spacing: -.5px;
+}
+
+/* Grey helper sentence under the heading */
+.intro {
+  max-width: 310px;
+  margin: 8px auto 25px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Stacks the form fields with even spacing between them */
+form {
+  display: grid;
+  gap: 16px;
+  text-align: left;
+}
+
+/* Field labels: clicking the text also focuses its box */
+label {
+  display: grid;
+  gap: 6px;
+  color: #34445a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Shared look for every text box */
+input {
+  width: 100%;
+  height: 43px;
+  padding: 0 12px;
+  border: 1px solid #bec9d6;
+  border-radius: 4px;
+  color: var(--ink);
+  font: 14px Arial, sans-serif;
+}
+
+/* Blue highlight on the box the person is typing in */
+input:focus {
+  outline: 2px solid #d8e3fa;
+  border-color: var(--blue);
+}
+
+/* Puts first name and last name side by side in two equal columns */
+.name-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* "Remember me" on the left, "Forgot password?" on the right */
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12px;
+}
+
+/* Makes the links in the form and below it brand blue */
+.form-row > a,
+.check a,
+.alternate a {
+  color: var(--blue);
+}
+
+/* Checkbox rows: box and text on one line, lighter text */
+.check {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* Keeps checkboxes small instead of full width */
+.check input {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+}
+
+/* Main blue button (Sign in / Create account) */
+button {
+  height: 44px;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  background: var(--blue);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Darker blue when the mouse is over the button */
+button:hover {
+  background: #173778;
+}
+
+/* "New applicant?" / "Already have an account?" line */
+.alternate {
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* Copyright text at the bottom */
+footer {
+  margin-top: 22px;
+  color: #7b8796;
+  font-size: 11px;
+  text-align: center;
 }
 
 
-body { 
-    margin:0; 
-    background:#f5f7fa; 
-    
-     font:14px/1.5 Arial, sans-serif;
-     }
-
-.page {
-     min-height:100vh;
-      display:flex;
-       flex-direction:column;
-        align-items:center; 
-        justify-content:center;
-         padding:32px 16px; 
-        }
-.auth-card {
-     width:min(100%, 430px); 
-     padding:28px 36px 30px;
-      border:1px solid var(--line);
-       border-radius:8px;
-        background:#fff;
-         box-shadow:0 5px 18px rgba(26,45,73,.06);
-          text-align:center;
-         }
-
-.logo { 
-    display:block;
-     width:88px; 
-     height:88px; 
-     margin:0 auto 10px;
-      object-fit:contain; 
-    }
-    .portal-name {
-         margin:0 0 26px;
-          color:var(--blue); 
-          font-size:12px;
-           font-weight:700;
-            letter-spacing:.04em;
-         }
-
-h1 { 
-    margin:0; 
-    font-size:27px; 
-    letter-spacing:-.5px;
- }
- .intro { 
-    max-width:310px;
-     margin:8px auto 25px;
-      color:var(--muted);
-       font-size:13px;
-     }
-
-form {
-     display:grid;
-      gap:16px; text-align:left;
-     }
-      label { 
-        display:grid;
-         gap:6px; color:#34445a; 
-         font-size:12px;
-          font-weight:700; 
-        } 
-        input { 
-            width:100%;
-             height:43px;
-              padding:0 12px; 
-              border:1px solid #bec9d6;
-               border-radius:4px;
-                color:var(--ink);
-                 font:14px Arial,sans-serif; 
-                
-                }
-                 input:focus { 
-                    outline:2px solid #d8e3fa;
-                     border-color:var(--blue);
-                     }
-                     .name-fields { 
-                        display:grid; 
-                        grid-template-columns:1fr 1fr;
-                         gap:12px;
-                         }
-                         .form-row {
-                             display:flex;
-                              align-items:center; 
-                              justify-content:space-between;
-                               gap:10px;
-                                font-size:12px;
-                             }
-                             .form-row > a,.check a,.alternate a { color:var(--blue); }
-                             .check { 
-                                display:flex;
-                                 align-items:center;
-                                  gap:7px; color:var(--muted); 
-                                  font-weight:400; }
-                                  .check input {
-                                     width:15px; height:15px;
-                                      margin:0;
-                                     } 
-                                     button {
-                                         height:44px;
-                                          border:0;
-                                           border-radius:4px;
-                                            color:#fff; 
-                                            background:var(--blue);
-                                             font-size:14px;
-                                              font-weight:700;
-                                               cursor:pointer; 
-                                            } button:hover {
-                                                 background:#173778; 
-                                                }
-                                                .alternate { 
-                                                    margin:24px 0 0;
-                                                     color:var(--muted);
-                                                      font-size:12px;
-                                                     }
-                                                      footer {
-                                                        
-                                                        margin-top:22px;
-                                                         color:#7b8796; 
-                                                         font-size:11px;
-                                                          text-align:center; }
