@@ -1,31 +1,72 @@
 <!doctype html>
+<!-- Create-account page -->
 <html lang="en">
   <head>
+    <!-- Shows all characters correctly -->
     <meta charset="UTF-8" />
+    <!-- Makes the page fit phone screens -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Text shown on the browser tab -->
     <title>Create account | MUST Admissions</title>
+    <!-- Same stylesheet as the sign-in page, so both look identical -->
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
+
+    <!-- Main content area, centred by the .page style -->
     <main class="page">
+
+      <!-- White card; aria-labelledby tells screen readers which heading names it -->
       <section class="auth-card" aria-labelledby="create-title">
-        <img class="logo" src="must-logo.png" alt="Mbarara University of Science and Technology logo" />
+
+        <!-- Logo; the alt text shows if the image fails to load -->
+        <img class="logo" src="assets/must-logo.png" alt="Mbarara University of Science and Technology logo" />
         <p class="portal-name">MUST Admissions Portal</p>
         <h1 id="create-title">Create an account</h1>
         <p class="intro">Start your application. We will verify your email and mobile number.</p>
-        <form action="#">
+       
+        <form >
+
+          <!-- First and last name side by side (two-column layout is in styles.css) -->
           <div class="name-fields">
-            <label>First name<input type="text" autocomplete="given-name" required /></label>
-            <label>Last name<input type="text" autocomplete="family-name" required /></label>
+            <label>
+              First name<input type="text" autocomplete="given-name" required />
+            </label>
+            <label>
+              Last name<input type="text" autocomplete="family-name" required />
+            </label>
           </div>
-          <label>Email address<input type="email" placeholder="you@example.com" autocomplete="email" required /></label>
-          <label>Mobile number<input type="tel" placeholder="+256 700 000 000" autocomplete="tel" required /></label>
-          <label>Password<input type="password" placeholder="At least 8 characters" autocomplete="new-password" required /></label>
-          <label class="check"><input type="checkbox" required /> I agree to the <a href="#terms">terms</a> and <a href="#privacy">privacy notice</a>.</label>
+
+          <!-- Email box: checks the format and cannot be empty -->
+          <label>
+            Email address<input type="email" placeholder="you@example.com" autocomplete="email" required />
+          </label>
+
+          <!-- Phone box: type="tel" shows the number keypad on phones -->
+          <label>
+            Mobile number<input type="tel" placeholder="+256 700 000 000" autocomplete="tel" required />
+          </label>
+
+          <!-- Password box: the 8-character hint is only text, add minlength="8" to enforce it -->
+          <label>
+            Password<input type="password" placeholder="At least 8 characters" autocomplete="new-password" required />
+          </label>
+
+          <!-- Agreement checkbox: must be ticked to continue; the links are placeholders -->
+          <label class="check">
+            <input type="checkbox" required /> I agree to the <a href="#terms">terms</a> and <a href="#privacy">privacy notice</a>.
+          </label>
+
+          <!-- Checks the required fields, then submits the form -->
           <button type="submit">Create account</button>
+
         </form>
+        <!-- Link back to the sign-in page -->
         <p class="alternate">Already have an account? <a href="index.html">Sign in</a></p>
+        
       </section>
+      <!-- Copyright line -->
       <footer>© 2026 Mbarara University of Science and Technology</footer>
     </main>
   </body>
